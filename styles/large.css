@@ -1,0 +1,69 @@
+@media only screen and (min-width: 38rem) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation li {
+        border: solid 1px #333;
+        padding: 0;
+        margin: 0;
+        background-color: var(--secondary-color-light);
+    }
+
+    .navigation a {
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        padding: 0.5rem;
+        text-align: left;
+    }
+
+    .navigation li.active a {
+        color: var(--primary-color-strong);
+        font-weight: 700;
+    }
+
+    .navigation a:hover {
+        text-decoration: underline;
+    }
+
+    main div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+
+    .about {
+        grid-column: span 2;
+    }
+
+    .certificates {
+        grid-column: span 3;
+        width: 100%;
+    }
+
+    #courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .course,
+    .courseCompleted {
+        width: 80%;
+    }
+}
