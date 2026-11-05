@@ -97,6 +97,10 @@ function showSelectedCourses(coursesArray, option = "all") {
     const course = document.getElementById("courses");
     let content = "";
     if (option == "all") {
+        const totalCredits = coursesArray.reduce((accumulator, credit) => {
+            return accumulator + credit.credits
+        }, 0);
+        content += `<p>The total number of credits: ${totalCredits}</p>`;
         for (const object of coursesArray) {
             if (object.completed == true) {
                 content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
@@ -106,6 +110,10 @@ function showSelectedCourses(coursesArray, option = "all") {
         }
     } else if (option == "wdd") {
         const wddCourses = coursesArray.filter(wdd => wdd.subject == "WDD");
+        const totalCredits = wddCourses.reduce((accumulator, credit) => {
+            return accumulator + credit.credits
+        }, 0);
+        content += `<p>The total number of credits: ${totalCredits}</p>`;
         for (const object of wddCourses) {
             if (object.completed == true) {
                 content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
@@ -115,6 +123,10 @@ function showSelectedCourses(coursesArray, option = "all") {
         }
     } else if (option == "cse") {
         const cseCourses = coursesArray.filter(cse => cse.subject == "CSE");
+        const totalCredits = cseCourses.reduce((accumulator, credit) => {
+            return accumulator + credit.credits
+        }, 0);
+        content += `<p>The total number of credits: ${totalCredits}</p>`;
         for (const object of cseCourses) {
             if (object.completed == true) {
                 content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
