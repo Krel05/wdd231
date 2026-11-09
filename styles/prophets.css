@@ -1,0 +1,30 @@
+:root {
+    --heading-color: #1d104d;
+    --background-color: #756a86;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+main,
+footer {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    color: var(--heading-color);
+    padding: 1rem;
+}

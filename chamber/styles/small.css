@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #6A00FF;
+    --primary-color-strong: #27005e;
+    --headings-font: "Merriweather", serif;
+    --text-font: "Open Sans", sans-serif;
+    --background-color: #cba6ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+footer {
+    font-family: var(--text-font);
+}
+
+h1,
+h2,
+h3,
+.page-title {
+    font-family: var(--headings-font);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    align-items: end;
+    gap: 8px;
+    background-color: var(--background-color);
+    padding: 0.5rem;
+    border-bottom: 2px solid #414141;
+}
+
+header span {
+    text-align: center;
+    font-weight: 700;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+}
+
+.navigation.show ul {
+    text-align: center;
+    width: 100%;
+}
+
+.navigation.show li {
+    display: block;
+    border-bottom: 1px solid #000;
+    padding: 0.25rem 0;
+}
+
+.navigation.show a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation.show li.active {
+    background-color: var(--primary-color-strong);
+}
+
+.navigation.show li.active a {
+    color: #eee;
+}
+
+.navigation.show li.home {
+    background-color: #000;
+}
+
+.navigation.show li.home a {
+    color: #dfbff5;
+}
+
+.navigation.show li.home a::before {
+    content: "\2666";
+}
+
+.navigation.show a:hover {
+    text-decoration: underline;
+}
+
+#nav-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #111;
+    cursor: pointer;
+}
+
+#nav-button::before {
+    content: "\2630";
+}
+
+#nav-button.show::before {
+    content: "\00D7";
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.3rem;
+    background-color: var(--background-color);
+}
+
+footer section {
+    padding: 0.5rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
