@@ -1,0 +1,60 @@
+{
+    "companies": [
+        {
+            "name": "Company 1",
+            "address": "address 1",
+            "phoneNumber": 55001001,
+            "url": "https://example.com",
+            "image": "images/companies/company 1.png",
+            "memberlevel": 1
+        },
+        {
+            "name": "Company 2",
+            "address": "address 2",
+            "phoneNumber": 55001002,
+            "url": "https://example2.com",
+            "image": "images/companies/company 2.png",
+            "memberlevel": 2
+        },
+        {
+            "name": "Company 3",
+            "address": "address 3",
+            "phoneNumber": 55001003,
+            "url": "https://example3.com",
+            "image": "images/companies/company 3.png",
+            "memberlevel": 3
+        },
+        {
+            "name": "Company 4",
+            "address": "address 4",
+            "phoneNumber": 55001004,
+            "url": "https://example4.com",
+            "image": "images/companies/company 4.png",
+            "memberlevel": 2
+        },
+        {
+            "name": "Company 5",
+            "address": "address 5",
+            "phoneNumber": 55001005,
+            "url": "https://example5.com",
+            "image": "images/companies/company 5.png",
+            "memberlevel": 2
+        },
+        {
+            "name": "Company 6",
+            "address": "address 6",
+            "phoneNumber": 55001006,
+            "url": "https://example6.com",
+            "image": "images/companies/company 6.png",
+            "memberlevel": 3
+        },
+        {
+            "name": "Company 7",
+            "address": "address 7",
+            "phoneNumber": 55001007,
+            "url": "https://example7.com",
+            "image": "images/companies/company 7.png",
+            "memberlevel": 1
+        }
+    ]
+}

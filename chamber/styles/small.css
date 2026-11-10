@@ -108,6 +108,59 @@ header span {
     content: "\00D7";
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    padding: 1rem 0 1rem 1rem;
+}
+
+main div {
+    text-align: center;
+}
+
+main section {
+    padding: 1rem;
+}
+
+.company {
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.5rem;
+    gap: 8px;
+    margin-bottom: 1rem;
+    background-color: var(--background-color);
+}
+
+.company h2 {
+    grid-column: span 3;
+    text-align: center;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #000;
+}
+
+.company img {
+    grid-column: span 1;
+    max-width: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.company ul {
+    grid-column: span 2;
+    list-style: none;
+    text-align: left;
+}
+
+.company ul li a {
+    text-decoration: none;
+    color: var(--primary-color-strong);
+}
+
 footer {
     display: flex;
     flex-direction: column;
