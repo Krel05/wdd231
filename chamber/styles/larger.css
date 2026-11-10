@@ -1,11 +1,3 @@
-:root {
-    --primary-color: #6A00FF;
-    --primary-color-strong: #27005e;
-    --headings-font: "Merriweather", serif;
-    --text-font: "Open Sans", sans-serif;
-    --background-color: #cba6ff;
-}
-
 @media only screen and (min-width: 38rem) {
 
     body {
