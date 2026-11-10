@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #6A00FF;
+    --primary-color-strong: #27005e;
+    --headings-font: "Merriweather", serif;
+    --text-font: "Open Sans", sans-serif;
+    --background-color: #cba6ff;
+}
+
+@media only screen and (min-width: 38rem) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        grid-column: span 1;
+        border-bottom: none;
+    }
+
+    nav {
+        grid-column: span 1;
+    }
+
+    main {
+        grid-column: span 2;
+    }
+
+    footer {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .social-media {
+        gap: 2rem;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        background-color: var(--background-color);
+    }
+
+    .navigation ul {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: end;
+        padding-top: 2rem;
+        padding-right: 1rem;
+        width: 100%;
+    }
+
+    .navigation ul li {
+        flex: 1;
+        padding: 0.5rem;
+    }
+
+    .navigation a {
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .navigation li.home a::before {
+        content: "\2666";
+    }
+
+    .navigation li.active {
+        background-color: var(--primary-color-strong);
+    }
+
+    .navigation li.active a {
+        color: #eee;
+    }
+
+    .navigation li:hover {
+        background-color: var(--primary-color);
+    }
+
+    .navigation li a:hover {
+        text-decoration: overline;
+        color: #eee;
+    }
+}
