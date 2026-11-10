@@ -88,4 +88,28 @@
         text-decoration: overline;
         color: #eee;
     }
+
+    .company-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        justify-items: center;
+    }
+
+    .company-grid div {
+        max-width: 300px;
+        grid-column: span 1;
+    }
+
+    .company-list h2,
+    .company-list li {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .company-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

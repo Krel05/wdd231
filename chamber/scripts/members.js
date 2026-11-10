@@ -55,3 +55,22 @@ const displayMembers = (companies) => {
 }
 
 getMembersData();
+
+
+//Code for buttons
+const grid = document.querySelector("#grid");
+const list = document.querySelector("#list");
+
+grid.addEventListener("click", () => {
+    const isPressed = section.classList.add("company-grid");
+    grid.setAttribute("aria-pressed", isPressed);
+    const isNotPressed = section.classList.remove("company-list");
+    list.setAttribute("aria-pressed", isNotPressed);
+})
+
+list.addEventListener("click", () => {
+    const isPressed = section.classList.add("company-list");
+    list.setAttribute("aria-pressed", isPressed);
+    const isNotPressed = section.classList.remove("company-grid");
+    grid.setAttribute("aria-pressed", isNotPressed);
+})
