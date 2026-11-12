@@ -18,14 +18,16 @@
     <link rel="icon" href="favicon.ico">
 
     <!--Meta media tags-->
-    <meta name="og:title" content="GAM chamber of commerece">
-    <meta name="og:description" content="GAM Chamber of Commerce Web Page">
-    <meta name="og:image" content="favicon.ico">
-    <meta name="og:url" content="https://krel05.github.io/wdd231/chamber/index.html">
+    <meta property="og:title" content="GAM chamber of commerece">
+    <meta property="og:description" content="GAM Chamber of Commerce Web Page">
+    <meta property="og:image" content="https://krel05.github.io/wdd231/chamber/favicon.ico">
+    <meta property="og:url" content="https://krel05.github.io/wdd231/chamber/index.html">
 
     <!--Script tags-->
     <script defer src="scripts/date.js"></script>
     <script defer src="scripts/nav.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
 
     <!--Font tags-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +57,31 @@
 
     <main>
         <h1>Home</h1>
+        <section class="hero">
+            <img src="images/hero-image.webp" alt="Hero Image" width="1600" height="760">
+            <button><a href="join.html">Join to the Comunity!</a></button>
+        </section>
+        <section id="current-events">
+            <div>
+                <h2>Event1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis animi nostrum odit provident
+                    qui atque officiis distinctio id necessitatibus.</p>
+            </div>
+            <div>
+                <h2>Event1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis animi nostrum odit provident
+                    qui atque
+                    officiis distinctio id necessitatibus.</p>
+            </div>
+            <div>
+                <h2>Event1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis animi nostrum odit provident
+                    qui atque
+                    officiis distinctio id necessitatibus.</p>
+            </div>
+        </section>
+        <section id="weather"></section>
+        <section id="spotlight" class="company-grid"></section>
     </main>
 
     <footer>

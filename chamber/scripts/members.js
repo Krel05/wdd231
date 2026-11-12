@@ -1,6 +1,6 @@
 const file = "data/members.json";
 
-const section = document.querySelector("#members");
+const members = document.querySelector("#members");
 
 async function getMembersData() {
     try {
@@ -50,7 +50,7 @@ const displayMembers = (companies) => {
         card.appendChild(ul);
 
 
-        section.appendChild(card);
+        members.appendChild(card);
     })
 }
 
@@ -62,15 +62,15 @@ const grid = document.querySelector("#grid");
 const list = document.querySelector("#list");
 
 grid.addEventListener("click", () => {
-    const isPressed = section.classList.add("company-grid");
+    const isPressed = members.classList.add("company-grid");
     grid.setAttribute("aria-pressed", isPressed);
-    const isNotPressed = section.classList.remove("company-list");
+    const isNotPressed = members.classList.remove("company-list");
     list.setAttribute("aria-pressed", isNotPressed);
 })
 
 list.addEventListener("click", () => {
-    const isPressed = section.classList.add("company-list");
+    const isPressed = members.classList.add("company-list");
     list.setAttribute("aria-pressed", isPressed);
-    const isNotPressed = section.classList.remove("company-grid");
+    const isNotPressed = members.classList.remove("company-grid");
     grid.setAttribute("aria-pressed", isNotPressed);
 })
