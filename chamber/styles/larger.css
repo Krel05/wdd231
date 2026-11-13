@@ -97,6 +97,14 @@
     .company-list li {
         font-size: 1rem;
     }
+
+    .current-events {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 64rem) {

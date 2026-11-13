@@ -26,7 +26,7 @@ function displaySpotlightMembers(data) {
         let random = getRandomNumber(0, (filterData.length - 1));
         const company = filterData[random];
         const card = document.createElement("div");
-        const name = document.createElement("h2");
+        const name = document.createElement("h3");
         const img = document.createElement("img");
         const ul = document.createElement("ul");
         const address = document.createElement("li");
