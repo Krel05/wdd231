@@ -93,7 +93,7 @@
         grid-column: span 1;
     }
 
-    .company-list h2,
+    .company-list h3,
     .company-list li {
         font-size: 1rem;
     }
