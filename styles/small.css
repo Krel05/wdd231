@@ -196,3 +196,47 @@ main section h2 {
     border: 1px solid #333;
     border-radius: 5px;
 }
+
+.modal {
+    border: 1px solid #000;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: var(--secondary-color-light);
+    box-shadow: 0 0 3rem #000;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.modal::backdrop {
+    background-color: #00000056;
+}
+
+.modal button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid #333;
+}
+
+.courseCompleted:hover,
+.course:hover {
+    background-color: var(--secondary-color-light);
+    color: #000;
+}
+
+.modal h2 {
+    background-color: var(--secondary-color-strong);
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.modal h3 {
+    padding-top: 0.25rem;
+}
+
+.modal p {
+    padding: 0.25rem;
+}

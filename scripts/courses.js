@@ -95,46 +95,103 @@ cse.addEventListener('click', () => showSelectedCourses(courses, "cse"));
 
 function showSelectedCourses(coursesArray, option = "all") {
     const course = document.getElementById("courses");
-    let content = "";
+    course.innerHTML = "";
     if (option == "all") {
         const totalCredits = coursesArray.reduce((accumulator, credit) => {
             return accumulator + credit.credits
         }, 0);
-        content += `<p>The total number of credits: ${totalCredits}</p>`;
+        const p = document.createElement("p");
+        p.innerHTML = `The total number of credits: ${totalCredits}`;
+        course.appendChild(p);
         for (const object of coursesArray) {
+            const button = document.createElement("button");
+            button.textContent = `${object.subject} ${object.number}`;
             if (object.completed == true) {
-                content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "courseCompleted");
             } else {
-                content += `<p class="course">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "course");
             }
+            course.appendChild(button);
+            button.addEventListener("click", () => {
+                showDialog(object);
+            });
         }
     } else if (option == "wdd") {
         const wddCourses = coursesArray.filter(wdd => wdd.subject == "WDD");
         const totalCredits = wddCourses.reduce((accumulator, credit) => {
             return accumulator + credit.credits
         }, 0);
-        content += `<p>The total number of credits: ${totalCredits}</p>`;
+        const p = document.createElement("p");
+        p.innerHTML = `The total number of credits: ${totalCredits}`;
+        course.appendChild(p);
         for (const object of wddCourses) {
+            const button = document.createElement("button");
+            button.textContent = `${object.subject} ${object.number}`;
             if (object.completed == true) {
-                content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "courseCompleted");
             } else {
-                content += `<p class="course">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "course");
             }
+            course.appendChild(button);
+            button.addEventListener("click", () => {
+                showDialog(object);
+            });
         }
     } else if (option == "cse") {
         const cseCourses = coursesArray.filter(cse => cse.subject == "CSE");
         const totalCredits = cseCourses.reduce((accumulator, credit) => {
             return accumulator + credit.credits
         }, 0);
-        content += `<p>The total number of credits: ${totalCredits}</p>`;
+        const p = document.createElement("p");
+        p.innerHTML = `The total number of credits: ${totalCredits}`;
+        course.appendChild(p);
         for (const object of cseCourses) {
+            const button = document.createElement("button");
+            button.textContent = `${object.subject} ${object.number}`;
             if (object.completed == true) {
-                content += `<p class="courseCompleted">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "courseCompleted");
             } else {
-                content += `<p class="course">${object.subject} ${object.number}</p>`;
+                button.setAttribute("class", "course");
             }
+            course.appendChild(button);
+            button.addEventListener("click", () => {
+                showDialog(object);
+            });
         }
     }
 
-    course.innerHTML = content;
+    //course.innerHTML = content;
+}
+
+function showDialog(courses) {
+    const modal = document.querySelector("#course-details");
+    modal.innerHTML = "";
+    const subject = document.createElement("h2");
+    const closeModal = document.createElement("button");
+    const title = document.createElement("h3");
+    const credits = document.createElement("p");
+    const certificate = document.createElement("p");
+    const description = document.createElement("p");
+    const technology = document.createElement("p");
+
+    subject.textContent = `${courses.subject}${courses.number}`;
+    closeModal.innerHTML = `&#10060;`;
+    title.textContent = `${courses.title}`;
+    credits.textContent = `${courses.credits} credits`;
+    certificate.textContent = `Certificate: ${courses.certificate}`;
+    description.textContent = `${courses.description}`;
+    technology.textContent = `Technology: ${courses.technology}`;
+
+    modal.appendChild(subject);
+    modal.appendChild(closeModal);
+    modal.appendChild(title);
+    modal.appendChild(credits);
+    modal.appendChild(certificate);
+    modal.appendChild(description);
+    modal.appendChild(technology);
+
+    modal.showModal();
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
 }
