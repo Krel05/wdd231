@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAM Chamber of commerce</title>
+    <title>Join Us</title>
 
     <!--Meta author and name tags-->
     <meta name="author" content="Jorge Gabriel Mena Santes">
@@ -54,7 +54,36 @@
     </nav>
 
     <main>
-        <h1>Join</h1>
+        <h1>Join Us</h1>
+        <h2>Fill this form to be part of the comunity!</h2>
+        <form method="GET" action="thanks.html" class="form">
+            <label>First Name: <input type="text" name="first" required autocomplete="given-name"
+                    title="Your First Name"></label>
+            <label>Last Name: <input type="text" name="last" required autocomplete="family-name"
+                    title="Your Last Name"></label>
+            <label>Organization Title: <input type="text" name="organization-title" required
+                    acutocomplete="organization-title" title="Organization Title must be more than 7 characters"
+                    pattern="[\w]{7,99}"></label>
+            <lable>Email Address: <input type="email" required name="email" autocomplete="email"
+                    placeholder="user@example.com"></lable>
+            <label>Phone Number: <input type="telephone" name="telephone" required atucomplete="tel"></label>
+            <label>Business/Organization Name: <input type="text" required name="organization-name"
+                    autocomplete="organization"></label>
+
+            <h3>Membership Level</h3>
+            <label><input type="radio" name="membership" value="np" checked>NP Membership is for non profit
+                organizations and there is no fee (np)</label>
+            <label><input type="radio" name="membership" value="bronze">Bronze Membership (bronze)</label>
+            <label><input type="radio" name="membership" value="silver">Silver Membership (silver)</label>
+            <label><input type="radio" name="membership" value="gold">Gold Membership (gold)</label>
+
+            <label>Bussiness/Organization Description: <textarea name="description"
+                    title="Bussiness/Organization Description"></textarea></label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit">
+
+        </form>
     </main>
 
     <footer>
