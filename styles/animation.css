@@ -1,0 +1,80 @@
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.a {
+    position: relative;
+    margin: 2rem;
+    width: 500px;
+    height: 500px;
+    background-color: #000;
+    border-width: 20px;
+    border-style: solid solid;
+    border-color: #000000 #555;
+    border-radius: 50%;
+    animation: spin 1.5s linear;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 10rem #1003caab;
+}
+
+.a::after {
+    content: "⚙️";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s linear infinite;
+    font-size: 300px;
+}
+
+.b {
+    position: relative;
+    margin: 2rem;
+    width: 500px;
+    height: 500px;
+    background-color: #000;
+    border-width: 20px;
+    border-style: solid solid;
+    border-color: #555 #000;
+    border-radius: 50%;
+    box-shadow: 0 0 10rem #1003caab;
+    transition: transform 1.5s linear;
+}
+
+.b:hover {
+    transform: rotate(360deg);
+}
+
+.b::before {
+    content: "⚙️";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 400px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+}
+
+.b:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
