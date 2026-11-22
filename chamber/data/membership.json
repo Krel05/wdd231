@@ -1,0 +1,42 @@
+{
+    "levels": [
+        {
+            "level": "Non-profit Membership",
+            "description": "This level is for non-profit organizations and there's no fee.",
+            "benefits": [
+                "No benefits"
+            ],
+            "price": "free"
+        },
+        {
+            "level": "Bronze Membership",
+            "description": "Entry level if you want to explore some features.",
+            "benefits": [
+                "No-ads",
+                "Appear on the main page"
+            ],
+            "price": "15 USD Monthly"
+        },
+        {
+            "level": "Silver Membership",
+            "description": "Standar level for serious companies/organizations.",
+            "benefits": [
+                "No-ads",
+                "Appear on the main page",
+                "More recomendations"
+            ],
+            "price": "20 USD Monthly"
+        },
+        {
+            "level": "Gold Membership",
+            "description": "VIP Level for top companies/organizations",
+            "benefits": [
+                "No-ads",
+                "Appear on the main page",
+                "More recomendations",
+                "AI Assitance"
+            ],
+            "price": "50 USD Monthly"
+        }
+    ]
+}
