@@ -18,9 +18,10 @@
     <link rel="icon" href="favicon.ico">
 
     <!--Meta media tags-->
-    <meta property="og:title" content="GAM chamber of commerece">
-    <meta property="og:description" content="GAM Chamber of Commerce Web Page">
-    <meta property="og:image" content="https://krel05.github.io/wdd231/chamber/favicon.ico">
+    <meta property="og:title" content="Join GAM chamber of commerece">
+    <meta property="og:description"
+        content="Fill this form so you can join our cahmber of commerce. Know our membership levels and their benefits!">
+    <meta property="og:image" content="https://krel05.github.io/wdd231/chamber/images/join.png">
     <meta property="og:url" content="https://krel05.github.io/wdd231/chamber/index.html">
 
     <!--Script tags-->
@@ -55,11 +56,11 @@
     </nav>
 
     <main>
-        <h1>Join Us</h1>
+        <h1>Join GAM Chamber of Commerce</h1>
         <div class="join">
             <div>
                 <h2 class="form-heading">Fill this form to be part of the comunity!</h2>
-                <form method="GET" action="thanks.html" class="form">
+                <form method="GET" action="thankyou.html" class="form">
                     <p>Required fields <span>*</span></p>
                     <fieldset>
                         <legend>Contact information</legend>
@@ -68,18 +69,18 @@
                         <label class="req">Last Name: <input type="text" name="last" required autocomplete="family-name"
                                 title="Your Last Name"></label>
                         <label class="req">Email Address: <input type="email" required name="email" autocomplete="email"
-                                placeholder="user@example.com"></label>
-                        <label class="req">Phone Number: <input type="telephone" name="telephone" required
-                                atucomplete="tel"></label>
+                                placeholder="user@example.com" title="Email"></label>
+                        <label class="req">Phone Number: <input type="tel" name="telephone" required autocomplete="tel"
+                                title="Phone Number"></label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Bussiness Information</legend>
                         <label class="req">Organization Title: <input type="text" name="organization-title" required
-                                acutocomplete="organization-title"
+                                autocomplete="organization-title"
                                 title="Organization Title must be more than 7 characters" pattern="[\w]{7,99}"></label>
                         <label class="req">Business/Organization Name: <input type="text" required
-                                name="organization-name" autocomplete="organization"></label>
+                                name="organization-name" autocomplete="organization" title="Organization Name"></label>
                         <label>Bussiness/Organization Description: <textarea name="description"
                                 title="Bussiness/Organization Description"></textarea></label>
                     </fieldset>
